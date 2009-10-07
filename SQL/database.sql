@@ -2,6 +2,8 @@
 # Structure for the `avps` table :
 #
 
+set names cp1251;
+
 DROP TABLE IF EXISTS `avps`;
 
 CREATE TABLE `avps` (
