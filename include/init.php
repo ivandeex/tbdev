@@ -48,7 +48,7 @@ array_pop($url);
 $DEFAULTBASEURL = (($_SERVER['SERVER_PORT'] == 443) ? "https://" : "http://").htmlspecialchars_uni($_SERVER['HTTP_HOST']).implode('/', $url);
 $BASEURL = $DEFAULTBASEURL;
 $announce_urls = array();
-$announce_urls[] = "$DEFAULTBASEURL/announce.php";
+$announce_urls[] = "$DEFAULTBASEURL/ann.php";
 
 // SECURITY
 define ('COOKIE_SALT', ''); // «аполните эту переменную любым мусором, сиволом эдак 32 - нужно дл€ соли кукисов

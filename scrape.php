@@ -61,6 +61,7 @@ $r .= "ee";
 
 header("Content-Type: text/plain");
 header("Pragma: no-cache");
-print($r);
+//print($r);
+echo("\n");
 
 ?>
