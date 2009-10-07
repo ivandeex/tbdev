@@ -13,17 +13,6 @@ if (!defined('UC_SYSOP'))
 </head>
 <body>
 
-<table width="100%" class="clear" border="0" cellspacing="0" cellpadding="0" style="background: transparent;">
-<tr>
-<td class="embedded" width="50%" background="./themes/<?=$ss_uri;?>/images/logobg.jpg">
-<a href="<?=$DEFAULTBASEURL?>"><img style="border: none" alt="<?=$SITENAME?>" title="<?=$SITENAME?>" src="./themes/<?=$ss_uri;?>/images/logo.jpg" /></a>
-</td>
-<td class="embedded" width="50%" align="right" style="text-align: right" background="./themes/<?=$ss_uri;?>/images/logobg.jpg">
-	<noindex><iframe src="http://bit-torrent.kiev.ua/banner.php" width="468" height="60" marginwidth="0" marginheight="0" scrolling="no" frameborder="0"></iframe></noindex>&nbsp;
-</td>
-</tr>
-</table>
-
 <!-- Top Navigation Menu for unregistered-->
 <table width="100%" border="0" cellspacing="0" cellpadding="2"><tr>
 <td align="center" class="topnav">&nbsp;<a href="<?=$DEFAULTBASEURL;?>/"><font color="#FFFFFF"><?=$tracker_lang['homepage'];?></font></a>

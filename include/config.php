@@ -49,7 +49,7 @@ $doxpath = "dox";
 // Email for sender/return path.
 $SITEEMAIL = "noreply@" . $_SERVER["HTTP_HOST"];
 
-$SITENAME = "TBDev Yuna Scatari Edition";
+$SITENAME = "TBDYSE";
 
 $autoclean_interval = 900;
 $pic_base_url = "./pic/";
@@ -62,7 +62,7 @@ $avatar_max_width = 100; // Максимальная ширина аватары.
 $avatar_max_height = 100; // Максимальная высота аватары.
 $points_per_hour = 1; // Сколько добавлять бонусов в час, если пользователь сидирует.
 $points_per_cleanup = $points_per_hour*($autoclean_interval/3600); // Don't change it!
-$default_theme = "TBDev"; // Тема по умолчанию для гостей.
+$default_theme = "Gray"; // Тема по умолчанию для гостей.
 $nc = "no"; // Не пропускать на трекер пиров с закрытыми портами.
 $default_language = "russian"; // Язык трекера по умолчанию.
 $deny_signup = 0; // Запретить регистрацию. 1 = регистрация отключена, 0 = регистрация включена.
