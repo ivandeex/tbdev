@@ -33,6 +33,29 @@ if(!defined('IN_ANNOUNCE'))
 require_once($rootpath . 'include/config.php');
 require_once($rootpath . 'include/secrets.php');
 
+# ==== VPN IP conversion ====
+$vpn2ip_conv = array("/etc/openvpn/status.log", "/etc/openvpn/vpn2ip.txt");
+$vpn2ip = array();
+
+foreach ($vpn2ip_conv as $conv_desc) {
+    $vs_file = @fopen($conv_desc, "r");
+    if (!$vs_file)  continue;
+    while ($line = fgets($vs_file)) {
+        if (preg_match("/^(\d[\.\d+]+\d),[\w\d\-]+,(\d[\.\d]+\d)[,:]/", $line, $ips))
+            $vpn2ip[$ips[1]] = $ips[2];
+    }
+    fclose($vs_file);
+}
+
+function vpn2ip($ip) {
+   global $vpn2ip;
+   if (array_key_exists($ip, $vpn2ip))
+       $ip = $vpn2ip[$ip];
+   return $ip;
+}
+# ===========================
+
+
 function err($msg) {
 	benc_resp(array("failure reason" => array(type => "string", value => $msg)));
 	exit();

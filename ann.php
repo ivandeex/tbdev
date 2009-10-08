@@ -138,11 +138,11 @@ while ($row = mysql_fetch_array($res)) {
 		continue;
 	}
 	if($compact) {
-		$peer_ip = explode('.', $row["ip"]);
+		$peer_ip = explode('.', vpn2ip($row["ip"]));
 		$plist .= pack("C*", $peer_ip[0], $peer_ip[1], $peer_ip[2], $peer_ip[3]). pack("n*", (int) $row["port"]);
 	} else {
 		$resp .= 'd' .
-			benc_str('ip') . benc_str($row['ip']) .
+			benc_str('ip') . benc_str(vpn2ip($row['ip'])) .
 			(!$no_peer_id ? benc_str("peer id") . benc_str($row["peer_id"]) : '') .
 			benc_str('port') . 'i' . $row['port'] . 'e' . 'e';
 	}
