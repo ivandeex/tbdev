@@ -183,7 +183,7 @@ function user_session() {
 		return;
 
 	$ip = getip();
-	$url = getenv("REQUEST_URI");
+	$url = $_SERVER["REQUEST_URI"];
 
 	if (!$CURUSER) {
 		$uid = -1;
@@ -288,7 +288,7 @@ function getip() {
 		 }
 	}*/
 
-	$ip = getenv('REMOTE_ADDR');
+	$ip = $_SERVER['REMOTE_ADDR'];
 
 	return $ip;
 }

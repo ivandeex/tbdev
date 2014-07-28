@@ -163,12 +163,12 @@ function getip() {
        $ip = $_SERVER['REMOTE_ADDR'];
      }
    } else {
-     if (getenv('HTTP_X_FORWARDED_FOR') && validip(getenv('HTTP_X_FORWARDED_FOR'))) {
-       $ip = getenv('HTTP_X_FORWARDED_FOR');
-     } elseif (getenv('HTTP_CLIENT_IP') && validip(getenv('HTTP_CLIENT_IP'))) {
-       $ip = getenv('HTTP_CLIENT_IP');
+     if ($_SERVER['HTTP_X_FORWARDED_FOR'] && validip($_SERVER['HTTP_X_FORWARDED_FOR'])) {
+       $ip = $_SERVER['HTTP_X_FORWARDED_FOR'];
+     } elseif ($_SERVER['HTTP_CLIENT_IP'] && validip($_SERVER['HTTP_CLIENT_IP'])) {
+       $ip = $_SERVER['HTTP_CLIENT_IP'];
      } else {
-       $ip = getenv('REMOTE_ADDR');
+       $ip = $_SERVER['REMOTE_ADDR'];
      }
    }
 
